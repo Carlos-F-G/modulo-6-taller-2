@@ -1,42 +1,56 @@
-# Proyecto: Hospital Nueva Vida
+# Hospital Nueva Vida - Sistema de Gestión de Citas Médicas
 
 ## Descripción
+La aplicación "Hospital Nueva Vida" es un sistema simple de gestión de citas médicas desarrollado con **React**, utilizando **IndexedDB** para el almacenamiento de citas en el navegador y compatible con **PWA (Progressive Web App)** para funcionalidad offline.
 
-Este proyecto es una aplicación web basada en **React** con **Vite**, que implementa **Service Workers** para el soporte offline y la instalación como una **Progressive Web App (PWA)**. Permite la gestión de pacientes en un hospital, facilitando el acceso a la información incluso sin conexión a Internet.
+## Características
+- **Autenticación de Usuario:** Inicio y cierre de sesión con almacenamiento en `localStorage`.
+- **Gestión de Citas:** Permite agregar, visualizar y eliminar citas utilizando **IndexedDB**.
+- **Interfaz Simple:** Botones claros y acceso rápido a las funcionalidades.
+- **PWA:** La aplicación es instalable y funciona sin conexión gracias al **Service Worker**.
 
 ## Tecnologías Utilizadas
+- **Frontend:** React, React Router, Vite
+- **Almacenamiento:** IndexedDB
+- **PWA:** Service Worker, Manifest.json
+- **Estilos:** CSS simple
 
-- **React** con **Vite** para el desarrollo frontend.
-- **Service Workers** para funcionalidad offline y caché.
-- **IndexedDB** para el almacenamiento local de datos.
-- **PWA (Progressive Web App)** para una experiencia mejorada en dispositivos móviles.
-- **CSS y estilos personalizados** para la interfaz de usuario.
+## Estructura del Proyecto
+```
+hospital-nueva-vida/
+├─ public/
+│   ├─ manifest.json
+│   ├─ service-worker.js
+│   └─ index.html
+├─ src/
+│   ├─ components/
+│   │   ├─ PatientForm.jsx
+│   │   ├─ DoctorsList.jsx
+│   │   └─ PatientsList.jsx
+│   ├─ hooks/
+│   │   └─ useAuth.js
+│   ├─ utils/
+│   │   └─ indexedDB.js
+│   ├─ App.tsx
+│   ├─ main.tsx
+│   └─ styles.css
+└─ package.json
+```
 
-## Instalación y Configuración
-
-1. Clonar este repositorio:
-   ```bash
-   git clone https://github.com/usuario/proyecto-hospital.git
-   cd proyecto-hospital
-   ```
-2. Instalar las dependencias:
-   ```bash
-   npm install
-   ```
-3. Iniciar el servidor de desarrollo:
-   ```bash
-   npm run dev
-   ```
-4. Para construir el proyecto para producción:
-   ```bash
-   npm run build
-   ```
-
-## Funcionalidades Clave
-
-- Registro y gestión de pacientes.
-- Soporte offline con **Service Workers**.
-- Almacenamiento en **IndexedDB**.
-- Instalación como PWA en dispositivos compatibles.
+## Instrucciones para Ejecutar
+1. Clonar el repositorio.
+2. Instalar las dependencias con:
+```
+npm install
+```
+3. Ejecutar la aplicación en modo desarrollo:
+```
+npm run dev
+```
+4. Acceder en el navegador a:
+```
+http://localhost:5173
+```
 
 Carlos Farias Galdames
+
